@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import transliterate
 
 
 def create_video_opencv(message: str):
@@ -11,9 +10,9 @@ def create_video_opencv(message: str):
     else:
         title = message
 
-    title = transliterate.slugify('ъ' + title)
     width, height = 100, 100
-    out = cv2.VideoWriter(f"media/videos/{title}.mp4", cv2.VideoWriter_fourcc(*'mp4v'), 24, (width, height))
+    fourcc = cv2.VideoWriter_fourcc(*'mp4g')
+    out = cv2.VideoWriter(f"{title}.mp4", fourcc, 24, (width, height))
     frame = np.zeros((height, width, 3), dtype=np.uint8)
 
     font = cv2.FONT_HERSHEY_COMPLEX
@@ -32,7 +31,7 @@ def create_video_opencv(message: str):
         if x + message_size[0][0] < 0:
             break
 
-    return {'title': title, 'path': f"videos/{title}.mp4"}
+    return {'title': title, 'path': f"{title}.mp4"}
 
 def main():
     message = input('Введите текст бегущей строки: ')
