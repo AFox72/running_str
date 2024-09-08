@@ -5,3 +5,5 @@
 <blockquote>
 <p><strong>Создание суперпользователя:</strong><br />&nbsp; &nbsp;python manage.py createsuperuser<br /><strong>Пример создания видео:</strong><br />&nbsp; &nbsp;http://127.0.0.1:8000?message=Текст сообщения</p>
 </blockquote>
+<h3><strong>Запуск через Docker:</strong></h3>
+<blockquote><strong>Сборка:</strong><br />&nbsp; &nbsp;docker build --tag django-docker .<br /><strong>Старт:</strong><br />&nbsp; &nbsp;docker run --publish 8000:8000 django-docker</blockquote>
