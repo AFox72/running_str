@@ -34,4 +34,4 @@ def create_video_opencv(message: str):
             break
 
     return {'title': title, 'path': f"videos/{title}.mp4"}
-    download_file(self.pk)
+    download_file(request=self.pk)
