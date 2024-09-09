@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import transliterate
-from video.views import download_file
 
 
 def create_video_opencv(message: str):
@@ -34,4 +33,3 @@ def create_video_opencv(message: str):
             break
 
     return {'title': title, 'path': f"videos/{title}.mp4"}
-    download_file(request=self.pk)
