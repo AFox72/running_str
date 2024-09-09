@@ -8,10 +8,6 @@
 </head>
 <body>
 
-<!--    <video width="400" controls>-->
-<!--      <source src="{{object.video|mymedia}}" type="video/mp4">-->
-<!--      Your browser does not support HTML5 video.-->
-<!--    </video>-->
 
 {% if object %}
 Видео: {{ object.title}}  <a href="{% url 'video:download_file' object.pk %}">Скачать</a>
