@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Video(models.Model):
-    title = models.CharField(max_length=50, verbose_name='название')
+    title = models.TextField( verbose_name='название')
     message = models.TextField(verbose_name='сообщение')
     video = models.FileField(upload_to='videos/', verbose_name='видео')
     create_time = models.DateTimeField(auto_now_add=True)
