@@ -11,7 +11,7 @@ def create_video_opencv(message: str):
     else:
         title = message
 
-    title = transliterate.slugify('ъ' + title)
+    title = transliterate.slugify(title)
     width, height = 100, 100
     out = cv2.VideoWriter(f"media/videos/{title}.mp4", cv2.VideoWriter_fourcc(*'mp4v'), 24, (width, height))
     frame = np.zeros((height, width, 3), dtype=np.uint8)
